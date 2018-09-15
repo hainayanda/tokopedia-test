@@ -1,5 +1,5 @@
 //
-//  Badge.swift
+//  WholeSalePrice.swift
 //  Tokopedia Test
 //
 //  Created by Nayanda Haberty on 15/09/18.
@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import HandyJSON
 
-class Badge {
-    var title : String?
-    var image_url : String?
-    var show : Bool?
+class WholeSalePrice : HandyJSON {
+    var count_min : Int?
+    var count_max : Int?
+    var price: String?
     
     required init(){}
 }

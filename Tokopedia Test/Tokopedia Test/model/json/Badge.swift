@@ -1,5 +1,5 @@
 //
-//  RestResponse.swift
+//  Badge.swift
 //  Tokopedia Test
 //
 //  Created by Nayanda Haberty on 15/09/18.
@@ -7,12 +7,12 @@
 //
 
 import Foundation
+import HandyJSON
 
-class RestResponse {
-    var status : RestStatus?
-    var header : RestHeader?
-    var data : [ResultData]?
-    var category : Category?
+class Badge : HandyJSON {
+    var title : String?
+    var image_url : String?
+    var show : Bool?
     
     required init(){}
 }

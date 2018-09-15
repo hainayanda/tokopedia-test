@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import HandyJSON
 
-class ResultData
+class ResultData : HandyJSON
 {
     var id: Int64?
     var name: String?

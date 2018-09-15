@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6AC56E4EE7122EFDAA5B2AA5 /* Pods_Tokopedia_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1EEE2420C30D0264470363 /* Pods_Tokopedia_TestTests.framework */; };
+		70873E42206EC6979F8C12F5 /* Pods_Tokopedia_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F389B35F0F45FFDB94B04D /* Pods_Tokopedia_Test.framework */; };
+		8D4769E65DD27544ED79DED2 /* Pods_Tokopedia_TestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F708629070A6A6F472D4FC /* Pods_Tokopedia_TestUITests.framework */; };
 		BB40D85F214D0C4200D31CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D85E214D0C4200D31CB7 /* AppDelegate.swift */; };
 		BB40D866214D0C4400D31CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB40D865214D0C4400D31CB7 /* Assets.xcassets */; };
 		BB40D874214D0C4400D31CB7 /* Tokopedia_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D873214D0C4400D31CB7 /* Tokopedia_TestTests.swift */; };
@@ -22,6 +25,12 @@
 		BB40D8A2214D40D200D31CB7 /* RestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D8A1214D40D200D31CB7 /* RestStatus.swift */; };
 		BB40D8A4214D413400D31CB7 /* RestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D8A3214D413400D31CB7 /* RestHeader.swift */; };
 		BB40D8A6214D423700D31CB7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D8A5214D423700D31CB7 /* Category.swift */; };
+		BB40D8A8214D46F200D31CB7 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D8A7214D46F200D31CB7 /* FilterViewController.swift */; };
+		BB40D8AA214D4FF100D31CB7 /* MainViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D8A9214D4FF100D31CB7 /* MainViewSetup.swift */; };
+		BB40D8AC214D50AB00D31CB7 /* FilterViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D8AB214D50AB00D31CB7 /* FilterViewSetup.swift */; };
+		BB40D8B7214D6EF200D31CB7 /* IntExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D8B6214D6EF200D31CB7 /* IntExtenstion.swift */; };
+		BBD422FF214D80E5005C8279 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD422FE214D80E5005C8279 /* Filter.swift */; };
+		BBD42303214D8564005C8279 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD42302214D8564005C8279 /* CurrencyTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +51,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27F708629070A6A6F472D4FC /* Pods_Tokopedia_TestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tokopedia_TestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A7020A78C14F7F9715F6A6D /* Pods-Tokopedia TestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokopedia TestTests.release.xcconfig"; path = "Target Support Files/Pods-Tokopedia TestTests/Pods-Tokopedia TestTests.release.xcconfig"; sourceTree = "<group>"; };
+		536BB2A500BCD02D4175EEAA /* Pods-Tokopedia Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokopedia Test.release.xcconfig"; path = "Target Support Files/Pods-Tokopedia Test/Pods-Tokopedia Test.release.xcconfig"; sourceTree = "<group>"; };
+		54F389B35F0F45FFDB94B04D /* Pods_Tokopedia_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tokopedia_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		639836B3F8C00028A39D4024 /* Pods-Tokopedia TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokopedia TestTests.debug.xcconfig"; path = "Target Support Files/Pods-Tokopedia TestTests/Pods-Tokopedia TestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		768774257A2D33F8D30F11DD /* Pods-Tokopedia TestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokopedia TestUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tokopedia TestUITests/Pods-Tokopedia TestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8C1EEE2420C30D0264470363 /* Pods_Tokopedia_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tokopedia_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB40D85B214D0C4200D31CB7 /* Tokopedia Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tokopedia Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB40D85E214D0C4200D31CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB40D865214D0C4400D31CB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +79,14 @@
 		BB40D8A1214D40D200D31CB7 /* RestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestStatus.swift; sourceTree = "<group>"; };
 		BB40D8A3214D413400D31CB7 /* RestHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestHeader.swift; sourceTree = "<group>"; };
 		BB40D8A5214D423700D31CB7 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		BB40D8A7214D46F200D31CB7 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		BB40D8A9214D4FF100D31CB7 /* MainViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewSetup.swift; sourceTree = "<group>"; };
+		BB40D8AB214D50AB00D31CB7 /* FilterViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewSetup.swift; sourceTree = "<group>"; };
+		BB40D8B6214D6EF200D31CB7 /* IntExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtenstion.swift; sourceTree = "<group>"; };
+		BBD422FE214D80E5005C8279 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		BBD42302214D8564005C8279 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
+		DBE801A41CF530693F9F0D4C /* Pods-Tokopedia Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokopedia Test.debug.xcconfig"; path = "Target Support Files/Pods-Tokopedia Test/Pods-Tokopedia Test.debug.xcconfig"; sourceTree = "<group>"; };
+		F48A353D1C6D937EE1D6879E /* Pods-Tokopedia TestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokopedia TestUITests.release.xcconfig"; path = "Target Support Files/Pods-Tokopedia TestUITests/Pods-Tokopedia TestUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70873E42206EC6979F8C12F5 /* Pods_Tokopedia_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC56E4EE7122EFDAA5B2AA5 /* Pods_Tokopedia_TestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,12 +110,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D4769E65DD27544ED79DED2 /* Pods_Tokopedia_TestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C02FAAB7D8F7E26CA491438 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54F389B35F0F45FFDB94B04D /* Pods_Tokopedia_Test.framework */,
+				8C1EEE2420C30D0264470363 /* Pods_Tokopedia_TestTests.framework */,
+				27F708629070A6A6F472D4FC /* Pods_Tokopedia_TestUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BB40D852214D0C4200D31CB7 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +134,8 @@
 				BB40D872214D0C4400D31CB7 /* Tokopedia TestTests */,
 				BB40D87D214D0C4400D31CB7 /* Tokopedia TestUITests */,
 				BB40D85C214D0C4200D31CB7 /* Products */,
+				C12029863F6708B5675DA181 /* Pods */,
+				8C02FAAB7D8F7E26CA491438 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,11 +152,16 @@
 		BB40D85D214D0C4200D31CB7 /* Tokopedia Test */ = {
 			isa = PBXGroup;
 			children = (
+				BBD42301214D8552005C8279 /* ui */,
+				BB40D8B3214D6E5700D31CB7 /* util */,
 				BB40D894214D3A4F00D31CB7 /* model */,
 				BB40D85E214D0C4200D31CB7 /* AppDelegate.swift */,
 				BB40D865214D0C4400D31CB7 /* Assets.xcassets */,
 				BB40D86A214D0C4400D31CB7 /* Info.plist */,
 				BB40D88C214D122100D31CB7 /* MainViewController.swift */,
+				BB40D8A9214D4FF100D31CB7 /* MainViewSetup.swift */,
+				BB40D8A7214D46F200D31CB7 /* FilterViewController.swift */,
+				BB40D8AB214D50AB00D31CB7 /* FilterViewSetup.swift */,
 				BB40D88E214D13F000D31CB7 /* Launch Screen.storyboard */,
 			);
 			path = "Tokopedia Test";
@@ -144,6 +188,24 @@
 		BB40D894214D3A4F00D31CB7 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				BBD42300214D80F1005C8279 /* json */,
+				BBD422FE214D80E5005C8279 /* Filter.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		BB40D8B3214D6E5700D31CB7 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				BB40D8B6214D6EF200D31CB7 /* IntExtenstion.swift */,
+			);
+			name = util;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		BBD42300214D80F1005C8279 /* json */ = {
+			isa = PBXGroup;
+			children = (
 				BB40D895214D3A6600D31CB7 /* ResultData.swift */,
 				BB40D897214D3BD000D31CB7 /* Shop.swift */,
 				BB40D899214D3CC600D31CB7 /* WholeSalePrice.swift */,
@@ -154,7 +216,28 @@
 				BB40D8A3214D413400D31CB7 /* RestHeader.swift */,
 				BB40D8A5214D423700D31CB7 /* Category.swift */,
 			);
-			path = model;
+			path = json;
+			sourceTree = "<group>";
+		};
+		BBD42301214D8552005C8279 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				BBD42302214D8564005C8279 /* CurrencyTextField.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		C12029863F6708B5675DA181 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DBE801A41CF530693F9F0D4C /* Pods-Tokopedia Test.debug.xcconfig */,
+				536BB2A500BCD02D4175EEAA /* Pods-Tokopedia Test.release.xcconfig */,
+				639836B3F8C00028A39D4024 /* Pods-Tokopedia TestTests.debug.xcconfig */,
+				2A7020A78C14F7F9715F6A6D /* Pods-Tokopedia TestTests.release.xcconfig */,
+				768774257A2D33F8D30F11DD /* Pods-Tokopedia TestUITests.debug.xcconfig */,
+				F48A353D1C6D937EE1D6879E /* Pods-Tokopedia TestUITests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB40D883214D0C4400D31CB7 /* Build configuration list for PBXNativeTarget "Tokopedia Test" */;
 			buildPhases = (
+				72141761D287718DA4A4E785 /* [CP] Check Pods Manifest.lock */,
 				BB40D857214D0C4200D31CB7 /* Sources */,
 				BB40D858214D0C4200D31CB7 /* Frameworks */,
 				BB40D859214D0C4200D31CB7 /* Resources */,
+				171BE8E9568CC824F73A32D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,6 +266,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB40D886214D0C4400D31CB7 /* Build configuration list for PBXNativeTarget "Tokopedia TestTests" */;
 			buildPhases = (
+				E04755C55C28090A798F0300 /* [CP] Check Pods Manifest.lock */,
 				BB40D86B214D0C4400D31CB7 /* Sources */,
 				BB40D86C214D0C4400D31CB7 /* Frameworks */,
 				BB40D86D214D0C4400D31CB7 /* Resources */,
@@ -199,6 +285,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB40D889214D0C4400D31CB7 /* Build configuration list for PBXNativeTarget "Tokopedia TestUITests" */;
 			buildPhases = (
+				EBEC859AE3BC29D9007EFBC6 /* [CP] Check Pods Manifest.lock */,
 				BB40D876214D0C4400D31CB7 /* Sources */,
 				BB40D877214D0C4400D31CB7 /* Frameworks */,
 				BB40D878214D0C4400D31CB7 /* Resources */,
@@ -282,21 +369,108 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		171BE8E9568CC824F73A32D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tokopedia Test/Pods-Tokopedia Test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Eatr/Eatr.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Nativefier/Nativefier.framework",
+				"${BUILT_PRODUCTS_DIR}/WARangeSlider/WARangeSlider.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eatr.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nativefier.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WARangeSlider.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tokopedia Test/Pods-Tokopedia Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72141761D287718DA4A4E785 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tokopedia Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E04755C55C28090A798F0300 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tokopedia TestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBEC859AE3BC29D9007EFBC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tokopedia TestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BB40D857214D0C4200D31CB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BB40D89E214D3E9100D31CB7 /* Badge.swift in Sources */,
+				BB40D8AA214D4FF100D31CB7 /* MainViewSetup.swift in Sources */,
 				BB40D8A2214D40D200D31CB7 /* RestStatus.swift in Sources */,
 				BB40D85F214D0C4200D31CB7 /* AppDelegate.swift in Sources */,
 				BB40D8A0214D407200D31CB7 /* RestResponse.swift in Sources */,
 				BB40D8A4214D413400D31CB7 /* RestHeader.swift in Sources */,
+				BBD42303214D8564005C8279 /* CurrencyTextField.swift in Sources */,
 				BB40D896214D3A6600D31CB7 /* ResultData.swift in Sources */,
+				BB40D8A8214D46F200D31CB7 /* FilterViewController.swift in Sources */,
 				BB40D89C214D3E0E00D31CB7 /* Label.swift in Sources */,
+				BB40D8B7214D6EF200D31CB7 /* IntExtenstion.swift in Sources */,
 				BB40D88D214D122100D31CB7 /* MainViewController.swift in Sources */,
 				BB40D898214D3BD000D31CB7 /* Shop.swift in Sources */,
 				BB40D89A214D3CC600D31CB7 /* WholeSalePrice.swift in Sources */,
+				BBD422FF214D80E5005C8279 /* Filter.swift in Sources */,
+				BB40D8AC214D50AB00D31CB7 /* FilterViewSetup.swift in Sources */,
 				BB40D8A6214D423700D31CB7 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +623,7 @@
 		};
 		BB40D884214D0C4400D31CB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBE801A41CF530693F9F0D4C /* Pods-Tokopedia Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -467,6 +642,7 @@
 		};
 		BB40D885214D0C4400D31CB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 536BB2A500BCD02D4175EEAA /* Pods-Tokopedia Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -485,6 +661,7 @@
 		};
 		BB40D887214D0C4400D31CB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 639836B3F8C00028A39D4024 /* Pods-Tokopedia TestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +683,7 @@
 		};
 		BB40D888214D0C4400D31CB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A7020A78C14F7F9715F6A6D /* Pods-Tokopedia TestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -527,6 +705,7 @@
 		};
 		BB40D88A214D0C4400D31CB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 768774257A2D33F8D30F11DD /* Pods-Tokopedia TestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -547,6 +726,7 @@
 		};
 		BB40D88B214D0C4400D31CB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F48A353D1C6D937EE1D6879E /* Pods-Tokopedia TestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

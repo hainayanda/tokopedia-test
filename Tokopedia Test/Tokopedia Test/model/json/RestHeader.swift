@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import HandyJSON
 
-class RestHeader {
+class RestHeader : HandyJSON {
     var total_data : Int?
     var total_data_no_category : Int?
     var additional_params : String?

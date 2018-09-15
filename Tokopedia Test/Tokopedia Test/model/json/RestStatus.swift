@@ -1,5 +1,5 @@
 //
-//  WholeSalePrice.swift
+//  RestStatus.swift
 //  Tokopedia Test
 //
 //  Created by Nayanda Haberty on 15/09/18.
@@ -7,11 +7,11 @@
 //
 
 import Foundation
+import HandyJSON
 
-class WholeSalePrice {
-    var count_min : Int?
-    var count_max : Int?
-    var price: String?
+class RestStatus : HandyJSON {
+    var error_code : Int?
+    var message : String?
     
     required init(){}
 }

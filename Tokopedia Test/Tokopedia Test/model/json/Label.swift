@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import HandyJSON
 
-class Label {
+class Label : HandyJSON {
     var title : String?
     var color : String?
     

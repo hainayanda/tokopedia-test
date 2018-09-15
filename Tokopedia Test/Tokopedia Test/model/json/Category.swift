@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import HandyJSON
 
-class Category {
+class Category : HandyJSON {
     var data : [String : CategoryData]?
     var selected_id : String?
     

@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import HandyJSON
 
-class Shop {
+class Shop : HandyJSON {
     
     var id : Int64?
     var name : String?
