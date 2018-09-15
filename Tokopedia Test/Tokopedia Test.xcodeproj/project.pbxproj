@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB40D85F214D0C4200D31CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D85E214D0C4200D31CB7 /* AppDelegate.swift */; };
+		BB40D866214D0C4400D31CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB40D865214D0C4400D31CB7 /* Assets.xcassets */; };
+		BB40D874214D0C4400D31CB7 /* Tokopedia_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D873214D0C4400D31CB7 /* Tokopedia_TestTests.swift */; };
+		BB40D87F214D0C4400D31CB7 /* Tokopedia_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D87E214D0C4400D31CB7 /* Tokopedia_TestUITests.swift */; };
+		BB40D88D214D122100D31CB7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D88C214D122100D31CB7 /* MainViewController.swift */; };
+		BB40D88F214D13F000D31CB7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB40D88E214D13F000D31CB7 /* Launch Screen.storyboard */; };
+		BB40D896214D3A6600D31CB7 /* ResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D895214D3A6600D31CB7 /* ResultData.swift */; };
+		BB40D898214D3BD000D31CB7 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D897214D3BD000D31CB7 /* Shop.swift */; };
+		BB40D89A214D3CC600D31CB7 /* WholeSalePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D899214D3CC600D31CB7 /* WholeSalePrice.swift */; };
+		BB40D89C214D3E0E00D31CB7 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D89B214D3E0E00D31CB7 /* Label.swift */; };
+		BB40D89E214D3E9100D31CB7 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D89D214D3E9100D31CB7 /* Badge.swift */; };
+		BB40D8A0214D407200D31CB7 /* RestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D89F214D407200D31CB7 /* RestResponse.swift */; };
+		BB40D8A2214D40D200D31CB7 /* RestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D8A1214D40D200D31CB7 /* RestStatus.swift */; };
+		BB40D8A4214D413400D31CB7 /* RestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D8A3214D413400D31CB7 /* RestHeader.swift */; };
+		BB40D8A6214D423700D31CB7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D8A5214D423700D31CB7 /* Category.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB40D870214D0C4400D31CB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB40D853214D0C4200D31CB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB40D85A214D0C4200D31CB7;
+			remoteInfo = "Tokopedia Test";
+		};
+		BB40D87B214D0C4400D31CB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB40D853214D0C4200D31CB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB40D85A214D0C4200D31CB7;
+			remoteInfo = "Tokopedia Test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BB40D85B214D0C4200D31CB7 /* Tokopedia Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tokopedia Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB40D85E214D0C4200D31CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BB40D865214D0C4400D31CB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB40D86A214D0C4400D31CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB40D86F214D0C4400D31CB7 /* Tokopedia TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tokopedia TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB40D873214D0C4400D31CB7 /* Tokopedia_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokopedia_TestTests.swift; sourceTree = "<group>"; };
+		BB40D875214D0C4400D31CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB40D87A214D0C4400D31CB7 /* Tokopedia TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tokopedia TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB40D87E214D0C4400D31CB7 /* Tokopedia_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokopedia_TestUITests.swift; sourceTree = "<group>"; };
+		BB40D880214D0C4400D31CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB40D88C214D122100D31CB7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BB40D88E214D13F000D31CB7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		BB40D895214D3A6600D31CB7 /* ResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultData.swift; sourceTree = "<group>"; };
+		BB40D897214D3BD000D31CB7 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		BB40D899214D3CC600D31CB7 /* WholeSalePrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WholeSalePrice.swift; sourceTree = "<group>"; };
+		BB40D89B214D3E0E00D31CB7 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		BB40D89D214D3E9100D31CB7 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		BB40D89F214D407200D31CB7 /* RestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestResponse.swift; sourceTree = "<group>"; };
+		BB40D8A1214D40D200D31CB7 /* RestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestStatus.swift; sourceTree = "<group>"; };
+		BB40D8A3214D413400D31CB7 /* RestHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestHeader.swift; sourceTree = "<group>"; };
+		BB40D8A5214D423700D31CB7 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB40D858214D0C4200D31CB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB40D86C214D0C4400D31CB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB40D877214D0C4400D31CB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB40D852214D0C4200D31CB7 = {
+			isa = PBXGroup;
+			children = (
+				BB40D85D214D0C4200D31CB7 /* Tokopedia Test */,
+				BB40D872214D0C4400D31CB7 /* Tokopedia TestTests */,
+				BB40D87D214D0C4400D31CB7 /* Tokopedia TestUITests */,
+				BB40D85C214D0C4200D31CB7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB40D85C214D0C4200D31CB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB40D85B214D0C4200D31CB7 /* Tokopedia Test.app */,
+				BB40D86F214D0C4400D31CB7 /* Tokopedia TestTests.xctest */,
+				BB40D87A214D0C4400D31CB7 /* Tokopedia TestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB40D85D214D0C4200D31CB7 /* Tokopedia Test */ = {
+			isa = PBXGroup;
+			children = (
+				BB40D894214D3A4F00D31CB7 /* model */,
+				BB40D85E214D0C4200D31CB7 /* AppDelegate.swift */,
+				BB40D865214D0C4400D31CB7 /* Assets.xcassets */,
+				BB40D86A214D0C4400D31CB7 /* Info.plist */,
+				BB40D88C214D122100D31CB7 /* MainViewController.swift */,
+				BB40D88E214D13F000D31CB7 /* Launch Screen.storyboard */,
+			);
+			path = "Tokopedia Test";
+			sourceTree = "<group>";
+		};
+		BB40D872214D0C4400D31CB7 /* Tokopedia TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB40D873214D0C4400D31CB7 /* Tokopedia_TestTests.swift */,
+				BB40D875214D0C4400D31CB7 /* Info.plist */,
+			);
+			path = "Tokopedia TestTests";
+			sourceTree = "<group>";
+		};
+		BB40D87D214D0C4400D31CB7 /* Tokopedia TestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BB40D87E214D0C4400D31CB7 /* Tokopedia_TestUITests.swift */,
+				BB40D880214D0C4400D31CB7 /* Info.plist */,
+			);
+			path = "Tokopedia TestUITests";
+			sourceTree = "<group>";
+		};
+		BB40D894214D3A4F00D31CB7 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				BB40D895214D3A6600D31CB7 /* ResultData.swift */,
+				BB40D897214D3BD000D31CB7 /* Shop.swift */,
+				BB40D899214D3CC600D31CB7 /* WholeSalePrice.swift */,
+				BB40D89B214D3E0E00D31CB7 /* Label.swift */,
+				BB40D89D214D3E9100D31CB7 /* Badge.swift */,
+				BB40D89F214D407200D31CB7 /* RestResponse.swift */,
+				BB40D8A1214D40D200D31CB7 /* RestStatus.swift */,
+				BB40D8A3214D413400D31CB7 /* RestHeader.swift */,
+				BB40D8A5214D423700D31CB7 /* Category.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB40D85A214D0C4200D31CB7 /* Tokopedia Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB40D883214D0C4400D31CB7 /* Build configuration list for PBXNativeTarget "Tokopedia Test" */;
+			buildPhases = (
+				BB40D857214D0C4200D31CB7 /* Sources */,
+				BB40D858214D0C4200D31CB7 /* Frameworks */,
+				BB40D859214D0C4200D31CB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tokopedia Test";
+			productName = "Tokopedia Test";
+			productReference = BB40D85B214D0C4200D31CB7 /* Tokopedia Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB40D86E214D0C4400D31CB7 /* Tokopedia TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB40D886214D0C4400D31CB7 /* Build configuration list for PBXNativeTarget "Tokopedia TestTests" */;
+			buildPhases = (
+				BB40D86B214D0C4400D31CB7 /* Sources */,
+				BB40D86C214D0C4400D31CB7 /* Frameworks */,
+				BB40D86D214D0C4400D31CB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB40D871214D0C4400D31CB7 /* PBXTargetDependency */,
+			);
+			name = "Tokopedia TestTests";
+			productName = "Tokopedia TestTests";
+			productReference = BB40D86F214D0C4400D31CB7 /* Tokopedia TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BB40D879214D0C4400D31CB7 /* Tokopedia TestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB40D889214D0C4400D31CB7 /* Build configuration list for PBXNativeTarget "Tokopedia TestUITests" */;
+			buildPhases = (
+				BB40D876214D0C4400D31CB7 /* Sources */,
+				BB40D877214D0C4400D31CB7 /* Frameworks */,
+				BB40D878214D0C4400D31CB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB40D87C214D0C4400D31CB7 /* PBXTargetDependency */,
+			);
+			name = "Tokopedia TestUITests";
+			productName = "Tokopedia TestUITests";
+			productReference = BB40D87A214D0C4400D31CB7 /* Tokopedia TestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB40D853214D0C4200D31CB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Nayanda;
+				TargetAttributes = {
+					BB40D85A214D0C4200D31CB7 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					BB40D86E214D0C4400D31CB7 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = BB40D85A214D0C4200D31CB7;
+					};
+					BB40D879214D0C4400D31CB7 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = BB40D85A214D0C4200D31CB7;
+					};
+				};
+			};
+			buildConfigurationList = BB40D856214D0C4200D31CB7 /* Build configuration list for PBXProject "Tokopedia Test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB40D852214D0C4200D31CB7;
+			productRefGroup = BB40D85C214D0C4200D31CB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB40D85A214D0C4200D31CB7 /* Tokopedia Test */,
+				BB40D86E214D0C4400D31CB7 /* Tokopedia TestTests */,
+				BB40D879214D0C4400D31CB7 /* Tokopedia TestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB40D859214D0C4200D31CB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB40D88F214D13F000D31CB7 /* Launch Screen.storyboard in Resources */,
+				BB40D866214D0C4400D31CB7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB40D86D214D0C4400D31CB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB40D878214D0C4400D31CB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB40D857214D0C4200D31CB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB40D89E214D3E9100D31CB7 /* Badge.swift in Sources */,
+				BB40D8A2214D40D200D31CB7 /* RestStatus.swift in Sources */,
+				BB40D85F214D0C4200D31CB7 /* AppDelegate.swift in Sources */,
+				BB40D8A0214D407200D31CB7 /* RestResponse.swift in Sources */,
+				BB40D8A4214D413400D31CB7 /* RestHeader.swift in Sources */,
+				BB40D896214D3A6600D31CB7 /* ResultData.swift in Sources */,
+				BB40D89C214D3E0E00D31CB7 /* Label.swift in Sources */,
+				BB40D88D214D122100D31CB7 /* MainViewController.swift in Sources */,
+				BB40D898214D3BD000D31CB7 /* Shop.swift in Sources */,
+				BB40D89A214D3CC600D31CB7 /* WholeSalePrice.swift in Sources */,
+				BB40D8A6214D423700D31CB7 /* Category.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB40D86B214D0C4400D31CB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB40D874214D0C4400D31CB7 /* Tokopedia_TestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB40D876214D0C4400D31CB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB40D87F214D0C4400D31CB7 /* Tokopedia_TestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB40D871214D0C4400D31CB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB40D85A214D0C4200D31CB7 /* Tokopedia Test */;
+			targetProxy = BB40D870214D0C4400D31CB7 /* PBXContainerItemProxy */;
+		};
+		BB40D87C214D0C4400D31CB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB40D85A214D0C4200D31CB7 /* Tokopedia Test */;
+			targetProxy = BB40D87B214D0C4400D31CB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BB40D881214D0C4400D31CB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BB40D882214D0C4400D31CB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB40D884214D0C4400D31CB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 384SJ33M83;
+				INFOPLIST_FILE = "Tokopedia Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nayanda.Tokopedia-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB40D885214D0C4400D31CB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 384SJ33M83;
+				INFOPLIST_FILE = "Tokopedia Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nayanda.Tokopedia-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BB40D887214D0C4400D31CB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 384SJ33M83;
+				INFOPLIST_FILE = "Tokopedia TestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nayanda.Tokopedia-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tokopedia Test.app/Tokopedia Test";
+			};
+			name = Debug;
+		};
+		BB40D888214D0C4400D31CB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 384SJ33M83;
+				INFOPLIST_FILE = "Tokopedia TestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nayanda.Tokopedia-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tokopedia Test.app/Tokopedia Test";
+			};
+			name = Release;
+		};
+		BB40D88A214D0C4400D31CB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 384SJ33M83;
+				INFOPLIST_FILE = "Tokopedia TestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nayanda.Tokopedia-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tokopedia Test";
+			};
+			name = Debug;
+		};
+		BB40D88B214D0C4400D31CB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 384SJ33M83;
+				INFOPLIST_FILE = "Tokopedia TestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nayanda.Tokopedia-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tokopedia Test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB40D856214D0C4200D31CB7 /* Build configuration list for PBXProject "Tokopedia Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB40D881214D0C4400D31CB7 /* Debug */,
+				BB40D882214D0C4400D31CB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB40D883214D0C4400D31CB7 /* Build configuration list for PBXNativeTarget "Tokopedia Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB40D884214D0C4400D31CB7 /* Debug */,
+				BB40D885214D0C4400D31CB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB40D886214D0C4400D31CB7 /* Build configuration list for PBXNativeTarget "Tokopedia TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB40D887214D0C4400D31CB7 /* Debug */,
+				BB40D888214D0C4400D31CB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB40D889214D0C4400D31CB7 /* Build configuration list for PBXNativeTarget "Tokopedia TestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB40D88A214D0C4400D31CB7 /* Debug */,
+				BB40D88B214D0C4400D31CB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB40D853214D0C4200D31CB7 /* Project object */;
+}
