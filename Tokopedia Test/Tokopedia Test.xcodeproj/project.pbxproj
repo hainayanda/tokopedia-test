@@ -36,6 +36,7 @@
 		BBD4230A214D95F0005C8279 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD42309214D95F0005C8279 /* UICollectionViewExtension.swift */; };
 		BBD4230C214D9789005C8279 /* MainCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4230B214D9789005C8279 /* MainCellView.swift */; };
 		BBD4230E214D9AED005C8279 /* PictureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4230D214D9AED005C8279 /* PictureManager.swift */; };
+		BBD42310214DC791005C8279 /* ShopTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4230F214DC791005C8279 /* ShopTypeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		BBD42309214D95F0005C8279 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		BBD4230B214D9789005C8279 /* MainCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellView.swift; sourceTree = "<group>"; };
 		BBD4230D214D9AED005C8279 /* PictureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PictureManager.swift; path = ../util/PictureManager.swift; sourceTree = "<group>"; };
+		BBD4230F214DC791005C8279 /* ShopTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeViewController.swift; sourceTree = "<group>"; };
 		DBE801A41CF530693F9F0D4C /* Pods-Tokopedia Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokopedia Test.debug.xcconfig"; path = "Target Support Files/Pods-Tokopedia Test/Pods-Tokopedia Test.debug.xcconfig"; sourceTree = "<group>"; };
 		F48A353D1C6D937EE1D6879E /* Pods-Tokopedia TestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokopedia TestUITests.release.xcconfig"; path = "Target Support Files/Pods-Tokopedia TestUITests/Pods-Tokopedia TestUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,6 +248,7 @@
 				BB40D8A7214D46F200D31CB7 /* FilterViewController.swift */,
 				BB40D8AB214D50AB00D31CB7 /* FilterRangeViewSetup.swift */,
 				BBD42305214D8F81005C8279 /* FilterShopTypeViewSetup.swift */,
+				BBD4230F214DC791005C8279 /* ShopTypeViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				BBD422FF214D80E5005C8279 /* Filter.swift in Sources */,
 				BB40D8AC214D50AB00D31CB7 /* FilterRangeViewSetup.swift in Sources */,
 				BB40D8A6214D423700D31CB7 /* Category.swift in Sources */,
+				BBD42310214DC791005C8279 /* ShopTypeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

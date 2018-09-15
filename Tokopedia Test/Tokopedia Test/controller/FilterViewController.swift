@@ -44,12 +44,15 @@ class FilterViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.lightGray
+        
         navigationBar = setupNavbar(with: #selector(dismiss(_:)), and: #selector(onResetClicked(_:)))
         let actionHandler = setupPriceFilter(maximumValue: Double(maximumPriceForSlider), topAnchorConstraint: navigationBar.bottomAnchor, margin: 12)
-        minimumPriceTextField = actionHandler.0
-        maximumPriceTextField = actionHandler.1
-        rangeSlider = actionHandler.2
-        wholeSaleSwitch = actionHandler.3
+        let priceFilterCard = actionHandler.0
+        minimumPriceTextField = actionHandler.1
+        maximumPriceTextField = actionHandler.2
+        rangeSlider = actionHandler.3
+        wholeSaleSwitch = actionHandler.4
+        setupShopType(topAnchorConstraint: priceFilterCard.bottomAnchor, margin: 12, goToShopType: #selector(goToShopTypeDetails(_:)))
         applyButton = setupApplyButton(onClick: #selector(apply(_:)))
     }
     
@@ -66,6 +69,11 @@ class FilterViewController : UIViewController {
     
     // HANDLER
     
+    @objc func goToShopTypeDetails(_ sender : UIButton){
+        let vc = ShopTypeViewController()
+        present(vc, animated: true, completion: nil)
+    }
+    
     @objc func apply(_ sender : UIButton){
         if let mainVC : MainViewController = presentingViewController as? MainViewController {
             mainVC.filter.maximumPrice = maximumPrice
@@ -81,7 +89,13 @@ class FilterViewController : UIViewController {
     }
     
     @objc func onResetClicked(_ sender : UIButton){
-        
+        if let mainVC : MainViewController = presentingViewController as? MainViewController {
+            maximumPriceTextField.text = mainVC.MAX_PRICE_HARD_CODED.priceFormatter(currency: "Rp")
+            minimumPriceTextField.text = "Rp 0"
+            wholeSaleSwitch.isOn = false
+            rangeSlider.upperValue = Double(mainVC.MAX_PRICE_HARD_CODED)
+            rangeSlider.lowerValue = 0
+        }
     }
     
     // FUNCTION

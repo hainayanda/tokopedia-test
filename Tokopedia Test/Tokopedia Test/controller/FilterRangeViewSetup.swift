@@ -104,9 +104,11 @@ extension FilterViewController : CurrencyTextFieldDelegate {
         return navBar
     }
     
-    func setupPriceFilter(maximumValue : Double, topAnchorConstraint topAnchor : NSLayoutYAxisAnchor, margin : CGFloat) -> (CurrencyTextField, CurrencyTextField, RangeSlider, UISwitch){
+    func setupPriceFilter(maximumValue : Double, topAnchorConstraint topAnchor : NSLayoutYAxisAnchor, margin : CGFloat) -> (UIView, CurrencyTextField, CurrencyTextField, RangeSlider, UISwitch){
         let viewCard = UIView()
-        viewCard.backgroundColor = UIColor.white
+        viewCard.backgroundColor = #colorLiteral(red: 0.9591727475, green: 0.9591727475, blue: 0.9591727475, alpha: 1)
+        viewCard.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.7).cgColor
+        viewCard.layer.borderWidth = 1
         viewCard.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(viewCard)
         
@@ -114,15 +116,13 @@ extension FilterViewController : CurrencyTextFieldDelegate {
         NSLayoutConstraint.activate([
             viewCard.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
             viewCard.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
-            viewCard.topAnchor.constraint(equalTo: topAnchor, constant : 18),
-            
-            //viewCard.heightAnchor.constraint(equalToConstant: 250)
+            viewCard.topAnchor.constraint(equalTo: topAnchor)
             ])
         
         let textFields = setupPriceFilterTextView(maximumValue: maximumValue, for: viewCard, margin)
         let slider = setupPriceFilterSlider(maximumValue: maximumValue, for: viewCard, topAnchor: textFields.0.bottomAnchor, margin * 2)
         let wholeSaleSwitch = setupWholeSale(for: viewCard, topAnchor: slider.bottomAnchor, margin)
-        return (textFields.0, textFields.1, slider, wholeSaleSwitch)
+        return (viewCard, textFields.0, textFields.1, slider, wholeSaleSwitch)
     }
     
     func setupPriceFilterTextView(maximumValue : Double, for containerView : UIView, _ margin : CGFloat) -> (CurrencyTextField, CurrencyTextField){

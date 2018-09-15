@@ -23,7 +23,7 @@ extension MainViewController {
             .addParam(withKey: "q", andValue: key)
             .addParam(withKey: "pmin", andValue: "\(filter.minimumPrice)")
             .addParam(withKey: "pmax", andValue: "\(filter.maximumPrice)")
-            .addParam(withKey: "wholeSale", andValue: filter.wholeSale ? "true" : "false")
+            .addParam(withKey: "wholesale", andValue: filter.wholeSale ? "true" : "false")
             .addParam(withKey: "official", andValue: filter.officialStore ? "true" : "false")
             .addParam(withKey: "fshop", andValue: filter.goldMerchant ? "2" : "1")
             .addParam(withKey: "start", andValue: "\(startIndex)")
