@@ -23,6 +23,8 @@ class FilterViewController : UIViewController {
     
     // VARIABLE
     
+    var maximumPriceForSlider : Int!
+    
     var maximumPrice : Int {
         return extractingValue(from: maximumPriceTextField)
     }
@@ -43,7 +45,7 @@ class FilterViewController : UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.lightGray
         navigationBar = setupNavbar(with: #selector(dismiss(_:)), and: #selector(onResetClicked(_:)))
-        let actionHandler = setupPriceFilter(maximumValue: 8000000, topAnchorConstraint: navigationBar.bottomAnchor, margin: 12)
+        let actionHandler = setupPriceFilter(maximumValue: Double(maximumPriceForSlider), topAnchorConstraint: navigationBar.bottomAnchor, margin: 12)
         minimumPriceTextField = actionHandler.0
         maximumPriceTextField = actionHandler.1
         rangeSlider = actionHandler.2
@@ -69,6 +71,7 @@ class FilterViewController : UIViewController {
             mainVC.filter.maximumPrice = maximumPrice
             mainVC.filter.minimumPrice = minimumPrice
             mainVC.filter.wholeSale = wholeSaleSwitch.isOn
+            mainVC.requestForResult(for: mainVC.KEY_FOR_SEARCH, with: mainVC.filter, startIndex: 0, count: 10)
         }
         self.dismiss(animated: true, completion: nil)
     }
