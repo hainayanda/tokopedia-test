@@ -8,44 +8,23 @@
 
 import Foundation
 import UIKit
-import DLRadioButton
 
-class ShopTypeCell : UITableViewCell {
+class ShopTypeCell : UICollectionViewCell {
     
-    //UI COMPONENT
-    
-    var radioButton : DLRadioButton!
-    var label : UILabel!
-    
-    // OVERRIDE
-    
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        radioButton = DLRadioButton(type: .contactAdd)
-        radioButton.translatesAutoresizingMaskIntoConstraints = false
-        radioButton.isIconSquare = true
-        radioButton.tintColor = #colorLiteral(red: 0.2588235294, green: 0.7098039216, blue: 0.2862745098, alpha: 1)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        let radius = min(contentView.frame.height, contentView.frame.width) / 2
+        contentView.round(corners: [.allCorners], with: radius)
+        contentView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.7).cgColor
+        contentView.layer.borderWidth = 1
         
-        label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 17)
-        label.textColor = UIColor.darkGray
-        label.translatesAutoresizingMaskIntoConstraints = false
         
-        self.contentView.addSubview(radioButton)
-        self.contentView.addSubview(label)
         
-        NSLayoutConstraint.activate([
-            radioButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            radioButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
-            
-            label.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            label.leadingAnchor.constraint(equalTo: radioButton.trailingAnchor, constant: 12),
-            contentView.trailingAnchor.constraint(equalTo: label.trailingAnchor, constant: 12)
-            ])
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        super.init(coder : aDecoder)
     }
+    
     
 }

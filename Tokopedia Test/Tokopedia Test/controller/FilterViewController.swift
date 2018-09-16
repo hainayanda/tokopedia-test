@@ -20,7 +20,7 @@ class FilterViewController : UIViewController {
     weak var wholeSaleSwitch : UISwitch!
     weak var rangeSlider : RangeSlider!
     weak var applyButton : UIButton!
-    
+    weak var shopTypeCollection : UICollectionView!
     //VARIABLE
     
     var filter : Filter!
@@ -54,7 +54,7 @@ class FilterViewController : UIViewController {
         maximumPriceTextField = actionHandler.2
         rangeSlider = actionHandler.3
         wholeSaleSwitch = actionHandler.4
-        setupShopType(topAnchorConstraint: priceFilterCard.bottomAnchor, margin: 12, goToShopType: #selector(goToShopTypeDetails(_:)))
+        shopTypeCollection = setupShopType(topAnchorConstraint: priceFilterCard.bottomAnchor, margin: 12, goToShopType: #selector(goToShopTypeDetails(_:)))
         applyButton = setupApplyButton(onClick: #selector(apply(_:)))
     }
     

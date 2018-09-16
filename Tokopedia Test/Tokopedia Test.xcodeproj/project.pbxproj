@@ -37,7 +37,9 @@
 		BBD4230C214D9789005C8279 /* MainCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4230B214D9789005C8279 /* MainCellView.swift */; };
 		BBD4230E214D9AED005C8279 /* PictureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4230D214D9AED005C8279 /* PictureManager.swift */; };
 		BBD42310214DC791005C8279 /* ShopTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4230F214DC791005C8279 /* ShopTypeViewController.swift */; };
-		BBD42314214DFEEA005C8279 /* ShopTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD42313214DFEEA005C8279 /* ShopTypeCell.swift */; };
+		BBD42314214DFEEA005C8279 /* ShopTypeRadioButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD42313214DFEEA005C8279 /* ShopTypeRadioButtonCell.swift */; };
+		BBD42316214E3A18005C8279 /* ShopTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD42315214E3A18005C8279 /* ShopTypeCell.swift */; };
+		BBD42318214E3B97005C8279 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD42317214E3B97005C8279 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +100,9 @@
 		BBD4230B214D9789005C8279 /* MainCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellView.swift; sourceTree = "<group>"; };
 		BBD4230D214D9AED005C8279 /* PictureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PictureManager.swift; path = ../util/PictureManager.swift; sourceTree = "<group>"; };
 		BBD4230F214DC791005C8279 /* ShopTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeViewController.swift; sourceTree = "<group>"; };
-		BBD42313214DFEEA005C8279 /* ShopTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeCell.swift; sourceTree = "<group>"; };
+		BBD42313214DFEEA005C8279 /* ShopTypeRadioButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeRadioButtonCell.swift; sourceTree = "<group>"; };
+		BBD42315214E3A18005C8279 /* ShopTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeCell.swift; sourceTree = "<group>"; };
+		BBD42317214E3B97005C8279 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		DBE801A41CF530693F9F0D4C /* Pods-Tokopedia Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokopedia Test.debug.xcconfig"; path = "Target Support Files/Pods-Tokopedia Test/Pods-Tokopedia Test.debug.xcconfig"; sourceTree = "<group>"; };
 		F48A353D1C6D937EE1D6879E /* Pods-Tokopedia TestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokopedia TestUITests.release.xcconfig"; path = "Target Support Files/Pods-Tokopedia TestUITests/Pods-Tokopedia TestUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -235,6 +239,7 @@
 			children = (
 				BBD42302214D8564005C8279 /* CurrencyTextField.swift */,
 				BBD42309214D95F0005C8279 /* UICollectionViewExtension.swift */,
+				BBD42317214E3B97005C8279 /* UIViewExtension.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -250,7 +255,8 @@
 				BB40D8AB214D50AB00D31CB7 /* FilterRangeViewSetup.swift */,
 				BBD42305214D8F81005C8279 /* FilterShopTypeViewSetup.swift */,
 				BBD4230F214DC791005C8279 /* ShopTypeViewController.swift */,
-				BBD42313214DFEEA005C8279 /* ShopTypeCell.swift */,
+				BBD42313214DFEEA005C8279 /* ShopTypeRadioButtonCell.swift */,
+				BBD42315214E3A18005C8279 /* ShopTypeCell.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -487,6 +493,7 @@
 			files = (
 				BBD4230E214D9AED005C8279 /* PictureManager.swift in Sources */,
 				BB40D89E214D3E9100D31CB7 /* Badge.swift in Sources */,
+				BBD42316214E3A18005C8279 /* ShopTypeCell.swift in Sources */,
 				BB40D8AA214D4FF100D31CB7 /* MainViewSetup.swift in Sources */,
 				BB40D8A2214D40D200D31CB7 /* RestStatus.swift in Sources */,
 				BB40D85F214D0C4200D31CB7 /* AppDelegate.swift in Sources */,
@@ -502,10 +509,11 @@
 				BBD42306214D8F81005C8279 /* FilterShopTypeViewSetup.swift in Sources */,
 				BB40D8B7214D6EF200D31CB7 /* IntExtenstion.swift in Sources */,
 				BB40D88D214D122100D31CB7 /* MainViewController.swift in Sources */,
-				BBD42314214DFEEA005C8279 /* ShopTypeCell.swift in Sources */,
+				BBD42314214DFEEA005C8279 /* ShopTypeRadioButtonCell.swift in Sources */,
 				BB40D898214D3BD000D31CB7 /* Shop.swift in Sources */,
 				BB40D89A214D3CC600D31CB7 /* WholeSalePrice.swift in Sources */,
 				BBD422FF214D80E5005C8279 /* Filter.swift in Sources */,
+				BBD42318214E3B97005C8279 /* UIViewExtension.swift in Sources */,
 				BB40D8AC214D50AB00D31CB7 /* FilterRangeViewSetup.swift in Sources */,
 				BB40D8A6214D423700D31CB7 /* Category.swift in Sources */,
 				BBD42310214DC791005C8279 /* ShopTypeViewController.swift in Sources */,

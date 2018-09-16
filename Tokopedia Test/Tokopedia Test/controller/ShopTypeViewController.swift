@@ -58,8 +58,8 @@ class ShopTypeViewController : UIViewController, UITableViewDataSource, UITableV
     }
     
     @objc func onResetClicked(_ sender : UIButton){
-        (tableView.cellForRow(at: IndexPath.init(row: 0, section: 0)) as! ShopTypeCell).radioButton.isSelected = false
-        (tableView.cellForRow(at: IndexPath.init(row: 1, section: 0)) as! ShopTypeCell).radioButton.isSelected = false
+        (tableView.cellForRow(at: IndexPath.init(row: 0, section: 0)) as! ShopTypeRadioButtonCell).radioButton.isSelected = false
+        (tableView.cellForRow(at: IndexPath.init(row: 1, section: 0)) as! ShopTypeRadioButtonCell).radioButton.isSelected = false
         goldMerchantSelected = false
         officialSelected = false
     }
@@ -68,7 +68,7 @@ class ShopTypeViewController : UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        let cell = tableView.cellForRow(at: indexPath) as! ShopTypeCell
+        let cell = tableView.cellForRow(at: indexPath) as! ShopTypeRadioButtonCell
         cell.radioButton.isSelected = !(cell.radioButton.isSelected)
         if indexPath.item == 0 {
             goldMerchantSelected = cell.radioButton.isSelected
@@ -79,7 +79,7 @@ class ShopTypeViewController : UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ShopTypeCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ShopTypeRadioButtonCell
         cell.label.text = indexPath.item == 0 ? "Gold Merchant" : "Official Store"
         cell.radioButton.isSelected = indexPath.item == 0 ? goldMerchantSelected : officialSelected
         return cell
@@ -170,7 +170,7 @@ class ShopTypeViewController : UIViewController, UITableViewDataSource, UITableV
             tableView.topAnchor.constraintEqualToSystemSpacingBelow(topAnchor, multiplier: 1)
             ])
         
-        tableView.register(ShopTypeCell.self, forCellReuseIdentifier: cellId)
+        tableView.register(ShopTypeRadioButtonCell.self, forCellReuseIdentifier: cellId)
         
         return tableView
     }

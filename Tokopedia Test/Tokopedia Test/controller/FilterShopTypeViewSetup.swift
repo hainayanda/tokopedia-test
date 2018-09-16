@@ -11,7 +11,7 @@ import UIKit
 
 extension FilterViewController {
     
-    func setupShopType(topAnchorConstraint topAnchor : NSLayoutYAxisAnchor, margin : CGFloat, goToShopType handler : Selector){
+    func setupShopType(topAnchorConstraint topAnchor : NSLayoutYAxisAnchor, margin : CGFloat, goToShopType handler : Selector) -> UICollectionView {
         let viewCard = UIView()
         viewCard.backgroundColor = #colorLiteral(red: 0.9591727475, green: 0.9591727475, blue: 0.9591727475, alpha: 1)
         viewCard.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.7).cgColor
@@ -49,6 +49,16 @@ extension FilterViewController {
             button.heightAnchor.constraint(equalToConstant: 30),
             button.widthAnchor.constraint(equalToConstant: 30)
             ])
+        return setupShopTypeButton(in: viewCard)
+    }
+    
+    func setupShopTypeButton(in containerView : UIView) -> UICollectionView {
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.estimatedItemSize = CGSize.init(width: 180, height: 45)
+        flowLayout.minimumLineSpacing = 12
+        flowLayout.minimumInteritemSpacing = 12
+        let collectionView = UICollectionView.init(frame: containerView.bounds, collectionViewLayout: flowLayout)
         
+        return collectionView
     }
 }
