@@ -82,6 +82,7 @@ extension FilterViewController : CurrencyTextFieldDelegate {
         navBar.setItems([navItem], animated: false)
         navBar.backgroundColor = #colorLiteral(red: 0.9591727475, green: 0.9591727475, blue: 0.9591727475, alpha: 1)
         navBar.tintColor = UIColor.gray
+        navBar.elevation = 1
         navBar.translatesAutoresizingMaskIntoConstraints = false
         
         let topView = UIView()
@@ -122,6 +123,8 @@ extension FilterViewController : CurrencyTextFieldDelegate {
         let textFields = setupPriceFilterTextView(maximumValue: maximumValue, for: viewCard, margin)
         let slider = setupPriceFilterSlider(maximumValue: maximumValue, for: viewCard, topAnchor: textFields.0.bottomAnchor, margin * 2)
         let wholeSaleSwitch = setupWholeSale(for: viewCard, topAnchor: slider.bottomAnchor, margin)
+        
+        self.view.sendSubview(toBack: viewCard)
         return (viewCard, textFields.0, textFields.1, slider, wholeSaleSwitch)
     }
     

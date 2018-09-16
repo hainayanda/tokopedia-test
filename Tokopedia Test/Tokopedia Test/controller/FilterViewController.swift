@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 import WARangeSlider
 
-class FilterViewController : UIViewController {
+class FilterViewController : UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+
     
     // UI COMPONENT
     
@@ -21,11 +22,13 @@ class FilterViewController : UIViewController {
     weak var rangeSlider : RangeSlider!
     weak var applyButton : UIButton!
     weak var shopTypeCollection : UICollectionView!
+    
     //VARIABLE
     
     var filter : Filter!
-    
     var maximumPriceForSlider : Int!
+    var keyboardTapGesture : UITapGestureRecognizer?
+    var cellId = "shopType"
     
     var maximumPrice : Int {
         return extractingValue(from: maximumPriceTextField)
@@ -34,8 +37,6 @@ class FilterViewController : UIViewController {
     var minimumPrice : Int {
         return extractingValue(from: minimumPriceTextField)
     }
-    
-    var keyboardTapGesture : UITapGestureRecognizer?
     
     // OVERRIDE
     
@@ -55,6 +56,9 @@ class FilterViewController : UIViewController {
         rangeSlider = actionHandler.3
         wholeSaleSwitch = actionHandler.4
         shopTypeCollection = setupShopType(topAnchorConstraint: priceFilterCard.bottomAnchor, margin: 12, goToShopType: #selector(goToShopTypeDetails(_:)))
+        shopTypeCollection.dataSource = self
+        shopTypeCollection.delegate = self
+        
         applyButton = setupApplyButton(onClick: #selector(apply(_:)))
     }
     
@@ -65,6 +69,7 @@ class FilterViewController : UIViewController {
         rangeSlider.upperValue = Double(filter.maximumPrice)
         rangeSlider.lowerValue = Double(filter.minimumPrice)
         wholeSaleSwitch.isOn = filter.wholeSale
+        shopTypeCollection.reloadData()
     }
     
     // HANDLER
@@ -100,6 +105,31 @@ class FilterViewController : UIViewController {
             rangeSlider.upperValue = Double(mainVC.MAX_PRICE_HARD_CODED)
             rangeSlider.lowerValue = 0
             filter = Filter()
+        }
+    }
+    
+    // COLLECTIONVIEW DATASOURCE & DELEGATE
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ShopTypeCell
+        cell.label.text = indexPath.item == 0 ? "Gold Merchant" : "Official Store"
+        cell.apply(color: ((indexPath.item == 0 && filter.goldMerchant) || filter.officialStore) ?  #colorLiteral(red: 0.2588235294, green: 0.7098039216, blue: 0.2862745098, alpha: 1) : UIColor.lightGray )
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: false)
+        let cell = collectionView.cellForItem(at: indexPath) as! ShopTypeCell
+        cell.apply(color: ((indexPath.item == 0 && filter.goldMerchant) || filter.officialStore) ? UIColor.lightGray : #colorLiteral(red: 0.2588235294, green: 0.7098039216, blue: 0.2862745098, alpha: 1) )
+        if indexPath.item == 0 {
+            filter.goldMerchant = !(filter.goldMerchant)
+        }
+        else {
+            filter.officialStore = !(filter.officialStore)
         }
     }
     

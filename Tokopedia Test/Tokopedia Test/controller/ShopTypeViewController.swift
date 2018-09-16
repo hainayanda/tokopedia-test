@@ -91,6 +91,7 @@ class ShopTypeViewController : UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 63
     }
+    
     // UI SETUP
     
     func setupNavbar(with dismissHandler : Selector, and resetHandler : Selector) -> UINavigationBar {
@@ -112,6 +113,7 @@ class ShopTypeViewController : UIViewController, UITableViewDataSource, UITableV
         navBar.setItems([navItem], animated: false)
         navBar.backgroundColor = #colorLiteral(red: 0.9591727475, green: 0.9591727475, blue: 0.9591727475, alpha: 1)
         navBar.tintColor = UIColor.gray
+        navBar.elevation = 1
         navBar.translatesAutoresizingMaskIntoConstraints = false
         
         let topView = UIView()
@@ -163,6 +165,7 @@ class ShopTypeViewController : UIViewController, UITableViewDataSource, UITableV
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(tableView)
+        self.view.sendSubview(toBack: tableView)
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),

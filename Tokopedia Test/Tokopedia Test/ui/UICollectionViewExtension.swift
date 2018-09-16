@@ -31,7 +31,7 @@ extension UICollectionView {
                 spinnerView = spView
             }
             else {
-                spinnerView = UIView.init(frame: CGRect.init(x: 0, y: position == .top ? 0 : self.contentSize.height, width: self.frame.width, height: 50))
+                spinnerView = UIView.init(frame: CGRect.init(x: 0, y: position == .top ? -50 : self.contentSize.height, width: self.frame.width, height: 50))
                 let spinner = UIActivityIndicatorView.init(frame: CGRect.init(x: (self.frame.width / 2) - 20, y: 0, width: 40, height: 40))
                 spinnerView?.addSubview(spinner)
                 spinner.startAnimating()
@@ -48,15 +48,19 @@ extension UICollectionView {
             switch position {
             case .top:
                 if self.spinnerExist(on: position) {
-                    self.contentInset = UIEdgeInsets.init(top: self.contentInset.top - 50, left: self.contentInset.left, bottom: self.contentInset.bottom, right: self.contentInset.right)
+                    UIView.animate(withDuration: 0.2, animations: {
+                        self.contentInset = UIEdgeInsets.init(top: self.contentInset.top - 50, left: self.contentInset.left, bottom: self.contentInset.bottom, right: self.contentInset.right)
+                    })
                 }
                 break
             default:
                 if self.spinnerExist(on: position){
-                    self.contentInset = UIEdgeInsets.init(top: self.contentInset.top, left: self.contentInset.left, bottom: self.contentInset.bottom - 50, right: self.contentInset.right)
+                    UIView.animate(withDuration: 0.2, animations: {
+                        self.contentInset = UIEdgeInsets.init(top: self.contentInset.top, left: self.contentInset.left, bottom: self.contentInset.bottom - 50, right: self.contentInset.right)
+                    })
                 }
             }
-            spinners.removeValue(forKey: self)
+            spinners[self]?.removeValue(forKey: position)
         }
     }
     

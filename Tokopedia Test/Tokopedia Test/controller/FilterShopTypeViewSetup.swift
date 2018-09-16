@@ -24,7 +24,7 @@ extension FilterViewController {
             viewCard.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
             viewCard.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
             viewCard.topAnchor.constraint(equalTo: topAnchor),
-            viewCard.heightAnchor.constraint(equalToConstant: 150)
+            viewCard.heightAnchor.constraint(equalToConstant: 120)
             ])
         
         let label = UILabel()
@@ -40,6 +40,7 @@ extension FilterViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: handler, for: .touchUpInside)
         viewCard.addSubview(button)
+        self.view.sendSubview(toBack: viewCard)
         
         NSLayoutConstraint.activate([
             label.leadingAnchor.constraint(equalTo: viewCard.leadingAnchor, constant: margin),
@@ -49,15 +50,26 @@ extension FilterViewController {
             button.heightAnchor.constraint(equalToConstant: 30),
             button.widthAnchor.constraint(equalToConstant: 30)
             ])
-        return setupShopTypeButton(in: viewCard)
+        return setupShopTypeButton(in: viewCard, with: button.bottomAnchor, 15)
     }
     
-    func setupShopTypeButton(in containerView : UIView) -> UICollectionView {
+    func setupShopTypeButton(in containerView : UIView, with topAnchor : NSLayoutYAxisAnchor, _ margin : CGFloat) -> UICollectionView {
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.estimatedItemSize = CGSize.init(width: 180, height: 45)
-        flowLayout.minimumLineSpacing = 12
-        flowLayout.minimumInteritemSpacing = 12
-        let collectionView = UICollectionView.init(frame: containerView.bounds, collectionViewLayout: flowLayout)
+        flowLayout.estimatedItemSize = CGSize.init(width: 145, height: 36)
+        flowLayout.minimumLineSpacing = 9
+        flowLayout.minimumInteritemSpacing = 9
+        flowLayout.scrollDirection = .horizontal
+        let collectionView = UICollectionView.init(frame: CGRect.init(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: flowLayout)
+        collectionView.register(ShopTypeCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.backgroundColor = UIColor.clear
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.addSubview(collectionView)
+        NSLayoutConstraint.activate([
+            collectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: margin),
+            collectionView.topAnchor.constraint(equalTo: topAnchor, constant: margin),
+            containerView.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor, constant: margin),
+            containerView.bottomAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: margin)
+            ])
         
         return collectionView
     }

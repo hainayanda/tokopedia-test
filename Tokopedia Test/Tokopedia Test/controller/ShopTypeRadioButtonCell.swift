@@ -21,6 +21,7 @@ class ShopTypeRadioButtonCell : UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.contentView.backgroundColor = #colorLiteral(red: 0.9591727475, green: 0.9591727475, blue: 0.9591727475, alpha: 1)
         radioButton = DLRadioButton(type: .contactAdd)
         radioButton.translatesAutoresizingMaskIntoConstraints = false
         radioButton.isIconSquare = true
