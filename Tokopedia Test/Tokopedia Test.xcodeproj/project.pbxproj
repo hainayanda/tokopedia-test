@@ -37,6 +37,7 @@
 		BBD4230C214D9789005C8279 /* MainCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4230B214D9789005C8279 /* MainCellView.swift */; };
 		BBD4230E214D9AED005C8279 /* PictureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4230D214D9AED005C8279 /* PictureManager.swift */; };
 		BBD42310214DC791005C8279 /* ShopTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4230F214DC791005C8279 /* ShopTypeViewController.swift */; };
+		BBD42314214DFEEA005C8279 /* ShopTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD42313214DFEEA005C8279 /* ShopTypeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +89,7 @@
 		BB40D8A7214D46F200D31CB7 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		BB40D8A9214D4FF100D31CB7 /* MainViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewSetup.swift; sourceTree = "<group>"; };
 		BB40D8AB214D50AB00D31CB7 /* FilterRangeViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRangeViewSetup.swift; sourceTree = "<group>"; };
-		BB40D8B6214D6EF200D31CB7 /* IntExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntExtenstion.swift; path = ../util/IntExtenstion.swift; sourceTree = "<group>"; };
+		BB40D8B6214D6EF200D31CB7 /* IntExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtenstion.swift; sourceTree = "<group>"; };
 		BBD422FE214D80E5005C8279 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		BBD42302214D8564005C8279 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 		BBD42305214D8F81005C8279 /* FilterShopTypeViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterShopTypeViewSetup.swift; sourceTree = "<group>"; };
@@ -97,6 +98,7 @@
 		BBD4230B214D9789005C8279 /* MainCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellView.swift; sourceTree = "<group>"; };
 		BBD4230D214D9AED005C8279 /* PictureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PictureManager.swift; path = ../util/PictureManager.swift; sourceTree = "<group>"; };
 		BBD4230F214DC791005C8279 /* ShopTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeViewController.swift; sourceTree = "<group>"; };
+		BBD42313214DFEEA005C8279 /* ShopTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeCell.swift; sourceTree = "<group>"; };
 		DBE801A41CF530693F9F0D4C /* Pods-Tokopedia Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokopedia Test.debug.xcconfig"; path = "Target Support Files/Pods-Tokopedia Test/Pods-Tokopedia Test.debug.xcconfig"; sourceTree = "<group>"; };
 		F48A353D1C6D937EE1D6879E /* Pods-Tokopedia TestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokopedia TestUITests.release.xcconfig"; path = "Target Support Files/Pods-Tokopedia TestUITests/Pods-Tokopedia TestUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -209,8 +211,7 @@
 				BB40D8B6214D6EF200D31CB7 /* IntExtenstion.swift */,
 				BBD4230D214D9AED005C8279 /* PictureManager.swift */,
 			);
-			name = util;
-			path = "New Group";
+			path = util;
 			sourceTree = "<group>";
 		};
 		BBD42300214D80F1005C8279 /* json */ = {
@@ -249,6 +250,7 @@
 				BB40D8AB214D50AB00D31CB7 /* FilterRangeViewSetup.swift */,
 				BBD42305214D8F81005C8279 /* FilterShopTypeViewSetup.swift */,
 				BBD4230F214DC791005C8279 /* ShopTypeViewController.swift */,
+				BBD42313214DFEEA005C8279 /* ShopTypeCell.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -403,6 +405,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tokopedia Test/Pods-Tokopedia Test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/Eatr/Eatr.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Nativefier/Nativefier.framework",
@@ -410,6 +413,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eatr.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nativefier.framework",
@@ -498,6 +502,7 @@
 				BBD42306214D8F81005C8279 /* FilterShopTypeViewSetup.swift in Sources */,
 				BB40D8B7214D6EF200D31CB7 /* IntExtenstion.swift in Sources */,
 				BB40D88D214D122100D31CB7 /* MainViewController.swift in Sources */,
+				BBD42314214DFEEA005C8279 /* ShopTypeCell.swift in Sources */,
 				BB40D898214D3BD000D31CB7 /* Shop.swift in Sources */,
 				BB40D89A214D3CC600D31CB7 /* WholeSalePrice.swift in Sources */,
 				BBD422FF214D80E5005C8279 /* Filter.swift in Sources */,

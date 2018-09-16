@@ -9,12 +9,22 @@
 import Foundation
 import UIKit
 
-class ShopTypeViewController : UIViewController {
+class ShopTypeViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // UI COMPONENT
     
+    weak var tableView : UITableView!
     weak var navigationBar : UINavigationBar!
     weak var applyButton : UIButton!
+    
+    //CONSTANT
+    
+    let cellId = "shopType"
+    
+    //VARIABLE
+    
+    var goldMerchantSelected = false
+    var officialSelected = false
     
     //OVERRIDE
     
@@ -28,11 +38,18 @@ class ShopTypeViewController : UIViewController {
         
         navigationBar = setupNavbar(with: #selector(dismiss(_:)), and: #selector(onResetClicked(_:)))
         applyButton = setupApplyButton(onClick: #selector(apply(_:)))
+        tableView = setupTableView(topAnchor: navigationBar.bottomAnchor, bottomAnchor: applyButton.topAnchor)
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
     // HANDLER
     
     @objc func apply(_ sender : UIButton){
+        if let presenter : FilterViewController = presentingViewController as? FilterViewController {
+            presenter.filter.goldMerchant = goldMerchantSelected
+            presenter.filter.officialStore = officialSelected
+        }
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -41,9 +58,39 @@ class ShopTypeViewController : UIViewController {
     }
     
     @objc func onResetClicked(_ sender : UIButton){
-        
+        (tableView.cellForRow(at: IndexPath.init(row: 0, section: 0)) as! ShopTypeCell).radioButton.isSelected = false
+        (tableView.cellForRow(at: IndexPath.init(row: 1, section: 0)) as! ShopTypeCell).radioButton.isSelected = false
+        goldMerchantSelected = false
+        officialSelected = false
     }
     
+    // DELEGATE
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        let cell = tableView.cellForRow(at: indexPath) as! ShopTypeCell
+        cell.radioButton.isSelected = !(cell.radioButton.isSelected)
+        if indexPath.item == 0 {
+            goldMerchantSelected = cell.radioButton.isSelected
+        }
+        else {
+            officialSelected = cell.radioButton.isSelected
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ShopTypeCell
+        cell.label.text = indexPath.item == 0 ? "Gold Merchant" : "Official Store"
+        cell.radioButton.isSelected = indexPath.item == 0 ? goldMerchantSelected : officialSelected
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 63
+    }
     // UI SETUP
     
     func setupNavbar(with dismissHandler : Selector, and resetHandler : Selector) -> UINavigationBar {
@@ -88,7 +135,6 @@ class ShopTypeViewController : UIViewController {
     }
     
     func setupApplyButton(onClick handler : Selector) -> UIButton {
-        
         let applyButton = UIButton()
         applyButton.setTitle("Apply", for: .normal)
         applyButton.titleLabel?.textColor = UIColor.white
@@ -107,6 +153,26 @@ class ShopTypeViewController : UIViewController {
             applyButton.heightAnchor.constraint(equalToConstant: 54)
             ])
         return applyButton
+    }
+    
+    func setupTableView(topAnchor: NSLayoutYAxisAnchor, bottomAnchor : NSLayoutYAxisAnchor) -> UITableView{
+        let tableView = UITableView()
+        tableView.allowsSelection = true
+        tableView.backgroundColor = UIColor.lightGray
+        tableView.separatorColor = UIColor.lightGray
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            bottomAnchor.constraint(equalTo: tableView.bottomAnchor),
+            tableView.topAnchor.constraintEqualToSystemSpacingBelow(topAnchor, multiplier: 1)
+            ])
+        
+        tableView.register(ShopTypeCell.self, forCellReuseIdentifier: cellId)
+        
+        return tableView
     }
     
 }

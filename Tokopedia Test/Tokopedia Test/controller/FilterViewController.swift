@@ -21,7 +21,9 @@ class FilterViewController : UIViewController {
     weak var rangeSlider : RangeSlider!
     weak var applyButton : UIButton!
     
-    // VARIABLE
+    //VARIABLE
+    
+    var filter : Filter!
     
     var maximumPriceForSlider : Int!
     
@@ -58,19 +60,19 @@ class FilterViewController : UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let mainVC : MainViewController = presentingViewController as? MainViewController {
-            maximumPriceTextField.text = mainVC.filter.maximumPrice.priceFormatter(currency: "Rp")
-            minimumPriceTextField.text = mainVC.filter.minimumPrice.priceFormatter(currency: "Rp")
-            rangeSlider.upperValue = Double(mainVC.filter.maximumPrice)
-            rangeSlider.lowerValue = Double(mainVC.filter.minimumPrice)
-            wholeSaleSwitch.isOn = mainVC.filter.wholeSale
-        }
+        maximumPriceTextField.text = filter.maximumPrice.priceFormatter(currency: "Rp")
+        minimumPriceTextField.text = filter.minimumPrice.priceFormatter(currency: "Rp")
+        rangeSlider.upperValue = Double(filter.maximumPrice)
+        rangeSlider.lowerValue = Double(filter.minimumPrice)
+        wholeSaleSwitch.isOn = filter.wholeSale
     }
     
     // HANDLER
     
     @objc func goToShopTypeDetails(_ sender : UIButton){
         let vc = ShopTypeViewController()
+        vc.goldMerchantSelected = filter.goldMerchant
+        vc.officialSelected = filter.officialStore
         present(vc, animated: true, completion: nil)
     }
     
@@ -79,6 +81,8 @@ class FilterViewController : UIViewController {
             mainVC.filter.maximumPrice = maximumPrice
             mainVC.filter.minimumPrice = minimumPrice
             mainVC.filter.wholeSale = wholeSaleSwitch.isOn
+            mainVC.filter.goldMerchant = filter.goldMerchant
+            mainVC.filter.officialStore = filter.officialStore
             mainVC.requestForResult(for: mainVC.KEY_FOR_SEARCH, with: mainVC.filter, startIndex: 0, count: 10)
         }
         self.dismiss(animated: true, completion: nil)
@@ -95,6 +99,7 @@ class FilterViewController : UIViewController {
             wholeSaleSwitch.isOn = false
             rangeSlider.upperValue = Double(mainVC.MAX_PRICE_HARD_CODED)
             rangeSlider.lowerValue = 0
+            filter = Filter()
         }
     }
     
