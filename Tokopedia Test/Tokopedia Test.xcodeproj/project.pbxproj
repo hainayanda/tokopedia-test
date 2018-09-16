@@ -12,8 +12,7 @@
 		8D4769E65DD27544ED79DED2 /* Pods_Tokopedia_TestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F708629070A6A6F472D4FC /* Pods_Tokopedia_TestUITests.framework */; };
 		BB40D85F214D0C4200D31CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D85E214D0C4200D31CB7 /* AppDelegate.swift */; };
 		BB40D866214D0C4400D31CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB40D865214D0C4400D31CB7 /* Assets.xcassets */; };
-		BB40D874214D0C4400D31CB7 /* Tokopedia_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D873214D0C4400D31CB7 /* Tokopedia_TestTests.swift */; };
-		BB40D87F214D0C4400D31CB7 /* Tokopedia_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D87E214D0C4400D31CB7 /* Tokopedia_TestUITests.swift */; };
+		BB40D874214D0C4400D31CB7 /* MainViewController_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D873214D0C4400D31CB7 /* MainViewController_Test.swift */; };
 		BB40D88D214D122100D31CB7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D88C214D122100D31CB7 /* MainViewController.swift */; };
 		BB40D88F214D13F000D31CB7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB40D88E214D13F000D31CB7 /* Launch Screen.storyboard */; };
 		BB40D896214D3A6600D31CB7 /* ResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40D895214D3A6600D31CB7 /* ResultData.swift */; };
@@ -72,11 +71,9 @@
 		BB40D865214D0C4400D31CB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB40D86A214D0C4400D31CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB40D86F214D0C4400D31CB7 /* Tokopedia TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tokopedia TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB40D873214D0C4400D31CB7 /* Tokopedia_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokopedia_TestTests.swift; sourceTree = "<group>"; };
+		BB40D873214D0C4400D31CB7 /* MainViewController_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController_Test.swift; sourceTree = "<group>"; };
 		BB40D875214D0C4400D31CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB40D87A214D0C4400D31CB7 /* Tokopedia TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tokopedia TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB40D87E214D0C4400D31CB7 /* Tokopedia_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokopedia_TestUITests.swift; sourceTree = "<group>"; };
-		BB40D880214D0C4400D31CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB40D88C214D122100D31CB7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BB40D88E214D13F000D31CB7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		BB40D895214D3A6600D31CB7 /* ResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultData.swift; sourceTree = "<group>"; };
@@ -150,7 +147,6 @@
 			children = (
 				BB40D85D214D0C4200D31CB7 /* Tokopedia Test */,
 				BB40D872214D0C4400D31CB7 /* Tokopedia TestTests */,
-				BB40D87D214D0C4400D31CB7 /* Tokopedia TestUITests */,
 				BB40D85C214D0C4200D31CB7 /* Products */,
 				C12029863F6708B5675DA181 /* Pods */,
 				8C02FAAB7D8F7E26CA491438 /* Frameworks */,
@@ -186,19 +182,10 @@
 		BB40D872214D0C4400D31CB7 /* Tokopedia TestTests */ = {
 			isa = PBXGroup;
 			children = (
-				BB40D873214D0C4400D31CB7 /* Tokopedia_TestTests.swift */,
+				BB40D873214D0C4400D31CB7 /* MainViewController_Test.swift */,
 				BB40D875214D0C4400D31CB7 /* Info.plist */,
 			);
 			path = "Tokopedia TestTests";
-			sourceTree = "<group>";
-		};
-		BB40D87D214D0C4400D31CB7 /* Tokopedia TestUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BB40D87E214D0C4400D31CB7 /* Tokopedia_TestUITests.swift */,
-				BB40D880214D0C4400D31CB7 /* Info.plist */,
-			);
-			path = "Tokopedia TestUITests";
 			sourceTree = "<group>";
 		};
 		BB40D894214D3A4F00D31CB7 /* model */ = {
@@ -532,7 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB40D874214D0C4400D31CB7 /* Tokopedia_TestTests.swift in Sources */,
+				BB40D874214D0C4400D31CB7 /* MainViewController_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,7 +527,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB40D87F214D0C4400D31CB7 /* Tokopedia_TestUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

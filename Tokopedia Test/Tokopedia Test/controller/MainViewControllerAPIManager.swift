@@ -63,7 +63,9 @@ extension MainViewController : EatrDelegate, UIScrollViewDelegate {
         }
         isRequesting = false
         guard let restResponse : RestResponse = response.parsedBody(), let data : [ResultData] = restResponse.data else {
-            
+            DispatchQueue.main.async {
+                self.showAlert(title: "ERROR", message: "FAILED TO GET DATA FROM SERVER")
+            }
             return
         }
         results.append(contentsOf: data)
