@@ -11,7 +11,7 @@ import Eatr
 
 extension MainViewController : EatrDelegate, UIScrollViewDelegate {
     
-    func requestForResult(for key : String, with filter: Filter, startIndex : Int, count: Int){
+    func requestForResult(for key : String, with filter: Filter, startIndex : Int, count: Int, delegate : EatrDelegate){
         guard !isRequesting else {
             return
         }
@@ -28,7 +28,7 @@ extension MainViewController : EatrDelegate, UIScrollViewDelegate {
             .addParam(withKey: "fshop", andValue: filter.goldMerchant ? "2" : "1")
             .addParam(withKey: "start", andValue: "\(startIndex)")
             .set(operationQueue: operationQueue)
-            .set(delegate: self)
+            .set(delegate: delegate)
             .asyncExecute()
     }
     
@@ -36,14 +36,14 @@ extension MainViewController : EatrDelegate, UIScrollViewDelegate {
     
     func eatrOnBeforeSending(_ sessionToSend: URLSession) -> URLSession {
         DispatchQueue.main.async {
-            self.showSpinnerForResults()
+            self.showSpinnerForResultsView()
         }
         return sessionToSend
     }
     
     func eatrOnTimeout() {
         DispatchQueue.main.async {
-            self.hideSpinnerForResults()
+            self.hideSpinnerForResultsView()
             self.showAlert(title: "ERROR", message: "SERVER TIMEOUT")
         }
         isRequesting = false
@@ -51,7 +51,7 @@ extension MainViewController : EatrDelegate, UIScrollViewDelegate {
     
     func eatrOnError(_ error: Error) {
         DispatchQueue.main.async {
-            self.hideSpinnerForResults()
+            self.hideSpinnerForResultsView()
             self.showAlert(title: "ERROR", message: "FAILED TO GET DATA FROM SERVER")
         }
         isRequesting = false
@@ -59,7 +59,7 @@ extension MainViewController : EatrDelegate, UIScrollViewDelegate {
     
     func eatrOnResponded(_ response: EatrResponse) {
         DispatchQueue.main.async {
-            self.hideSpinnerForResults()
+            self.hideSpinnerForResultsView()
         }
         isRequesting = false
         guard let restResponse : RestResponse = response.parsedBody(), let data : [ResultData] = restResponse.data else {
@@ -74,7 +74,7 @@ extension MainViewController : EatrDelegate, UIScrollViewDelegate {
     
     // FUNCTION
     
-    func showSpinnerForResults(){
+    func showSpinnerForResultsView(){
         if results.count == 0 {
             blurEffect.frame = resultCollectionView.bounds
             
@@ -90,7 +90,7 @@ extension MainViewController : EatrDelegate, UIScrollViewDelegate {
         }
     }
     
-    func hideSpinnerForResults(){
+    func hideSpinnerForResultsView(){
         bigSpinner.stopAnimating()
         bigSpinner.removeFromSuperview()
         blurEffect.removeFromSuperview()

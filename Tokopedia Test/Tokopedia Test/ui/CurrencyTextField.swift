@@ -14,6 +14,9 @@ class CurrencyTextField : UITextField {
     @IBInspectable var currency : String?
     
     var value : Int {
+        set {
+            set(intValue: newValue)
+        }
         get {
             guard let text : String = self.text, text.count > 0 else {
                 return 0
@@ -55,11 +58,15 @@ class CurrencyTextField : UITextField {
     
     @objc func textDidChange(){
         let value = (delegate as? CurrencyTextFieldDelegate)?.currencyTextField(self, onValueChangeTo: self.value) ?? self.value
-        if value == 0 {
+        set(intValue: value)
+    }
+    
+    fileprivate func set(intValue : Int){
+        if intValue == 0 {
             self.text = ""
             return
         }
-        if let commaSeparated : String = value.asCommaSeparated {
+        if let commaSeparated : String = intValue.asCommaSeparated {
             let currency : String = self.currency != nil ? self.currency! : ""
             self.text = "\(currency) \(commaSeparated)"
         }

@@ -36,9 +36,9 @@ class ShopTypeViewController : UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.lightGray
         
-        navigationBar = setupNavbar(with: #selector(dismiss(_:)), and: #selector(onResetClicked(_:)))
-        applyButton = setupApplyButton(onClick: #selector(apply(_:)))
-        tableView = setupTableView(topAnchor: navigationBar.bottomAnchor, bottomAnchor: applyButton.topAnchor)
+        navigationBar = createNavigationBar(with: #selector(dismiss(_:)), and: #selector(onResetClicked(_:)))
+        applyButton = createApplyButton(onClick: #selector(apply(_:)))
+        tableView = createTableView(topAnchor: navigationBar.bottomAnchor, bottomAnchor: applyButton.topAnchor)
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -94,7 +94,7 @@ class ShopTypeViewController : UIViewController, UITableViewDataSource, UITableV
     
     // UI SETUP
     
-    func setupNavbar(with dismissHandler : Selector, and resetHandler : Selector) -> UINavigationBar {
+    func createNavigationBar(with dismissHandler : Selector, and resetHandler : Selector) -> UINavigationBar {
         let screenSize: CGRect = UIScreen.main.bounds
         
         let navBar = UINavigationBar()
@@ -136,7 +136,7 @@ class ShopTypeViewController : UIViewController, UITableViewDataSource, UITableV
         return navBar
     }
     
-    func setupApplyButton(onClick handler : Selector) -> UIButton {
+    func createApplyButton(onClick handler : Selector) -> UIButton {
         let applyButton = UIButton()
         applyButton.setTitle("Apply", for: .normal)
         applyButton.titleLabel?.textColor = UIColor.white
@@ -157,7 +157,7 @@ class ShopTypeViewController : UIViewController, UITableViewDataSource, UITableV
         return applyButton
     }
     
-    func setupTableView(topAnchor: NSLayoutYAxisAnchor, bottomAnchor : NSLayoutYAxisAnchor) -> UITableView{
+    func createTableView(topAnchor: NSLayoutYAxisAnchor, bottomAnchor : NSLayoutYAxisAnchor) -> UITableView{
         let tableView = UITableView()
         tableView.allowsSelection = true
         tableView.backgroundColor = UIColor.lightGray

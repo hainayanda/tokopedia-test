@@ -16,6 +16,21 @@ class ShopTypeCell : UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        assemblyCell(frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder : aDecoder)
+    }
+    
+    func apply(color : UIColor){
+        label.textColor = color.withAlphaComponent(0.7)
+        circle.layer.borderColor = color.withAlphaComponent(0.5).cgColor
+        circle.backgroundColor = color.withAlphaComponent(0.15)
+        contentView.layer.borderColor = color.withAlphaComponent(0.7).cgColor
+    }
+    
+    fileprivate func assemblyCell(_ frame : CGRect){
         let radius = contentView.frame.height / 2
         contentView.round(corners: [.allCorners], with: radius)
         contentView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.7).cgColor
@@ -47,17 +62,6 @@ class ShopTypeCell : UICollectionViewCell {
             label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 9),
             label.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
             ])
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder : aDecoder)
-    }
-    
-    func apply(color : UIColor){
-        label.textColor = color.withAlphaComponent(0.7)
-        circle.layer.borderColor = color.withAlphaComponent(0.5).cgColor
-        circle.backgroundColor = color.withAlphaComponent(0.15)
-        contentView.layer.borderColor = color.withAlphaComponent(0.7).cgColor
     }
     
 }

@@ -34,7 +34,7 @@
 		BBD42306214D8F81005C8279 /* FilterShopTypeViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD42305214D8F81005C8279 /* FilterShopTypeViewSetup.swift */; };
 		BBD42308214D90B6005C8279 /* MainViewControllerAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD42307214D90B6005C8279 /* MainViewControllerAPIManager.swift */; };
 		BBD4230A214D95F0005C8279 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD42309214D95F0005C8279 /* UICollectionViewExtension.swift */; };
-		BBD4230C214D9789005C8279 /* MainCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4230B214D9789005C8279 /* MainCellView.swift */; };
+		BBD4230C214D9789005C8279 /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4230B214D9789005C8279 /* MainViewCell.swift */; };
 		BBD4230E214D9AED005C8279 /* PictureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4230D214D9AED005C8279 /* PictureManager.swift */; };
 		BBD42310214DC791005C8279 /* ShopTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4230F214DC791005C8279 /* ShopTypeViewController.swift */; };
 		BBD42314214DFEEA005C8279 /* ShopTypeRadioButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD42313214DFEEA005C8279 /* ShopTypeRadioButtonCell.swift */; };
@@ -97,7 +97,7 @@
 		BBD42305214D8F81005C8279 /* FilterShopTypeViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterShopTypeViewSetup.swift; sourceTree = "<group>"; };
 		BBD42307214D90B6005C8279 /* MainViewControllerAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerAPIManager.swift; sourceTree = "<group>"; };
 		BBD42309214D95F0005C8279 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
-		BBD4230B214D9789005C8279 /* MainCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellView.swift; sourceTree = "<group>"; };
+		BBD4230B214D9789005C8279 /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
 		BBD4230D214D9AED005C8279 /* PictureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PictureManager.swift; path = ../util/PictureManager.swift; sourceTree = "<group>"; };
 		BBD4230F214DC791005C8279 /* ShopTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeViewController.swift; sourceTree = "<group>"; };
 		BBD42313214DFEEA005C8279 /* ShopTypeRadioButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeRadioButtonCell.swift; sourceTree = "<group>"; };
@@ -170,6 +170,7 @@
 		BB40D85D214D0C4200D31CB7 /* Tokopedia Test */ = {
 			isa = PBXGroup;
 			children = (
+				BB5D1737214EBDD0001D345B /* cell */,
 				BBD42304214D8F3E005C8279 /* controller */,
 				BBD42301214D8552005C8279 /* ui */,
 				BB40D8B3214D6E5700D31CB7 /* util */,
@@ -218,6 +219,16 @@
 			path = util;
 			sourceTree = "<group>";
 		};
+		BB5D1737214EBDD0001D345B /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				BBD42313214DFEEA005C8279 /* ShopTypeRadioButtonCell.swift */,
+				BBD42315214E3A18005C8279 /* ShopTypeCell.swift */,
+				BBD4230B214D9789005C8279 /* MainViewCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		BBD42300214D80F1005C8279 /* json */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,13 +261,10 @@
 				BB40D88C214D122100D31CB7 /* MainViewController.swift */,
 				BB40D8A9214D4FF100D31CB7 /* MainViewSetup.swift */,
 				BBD42307214D90B6005C8279 /* MainViewControllerAPIManager.swift */,
-				BBD4230B214D9789005C8279 /* MainCellView.swift */,
 				BB40D8A7214D46F200D31CB7 /* FilterViewController.swift */,
 				BB40D8AB214D50AB00D31CB7 /* FilterRangeViewSetup.swift */,
 				BBD42305214D8F81005C8279 /* FilterShopTypeViewSetup.swift */,
 				BBD4230F214DC791005C8279 /* ShopTypeViewController.swift */,
-				BBD42313214DFEEA005C8279 /* ShopTypeRadioButtonCell.swift */,
-				BBD42315214E3A18005C8279 /* ShopTypeCell.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -500,7 +508,7 @@
 				BBD4230A214D95F0005C8279 /* UICollectionViewExtension.swift in Sources */,
 				BB40D8A0214D407200D31CB7 /* RestResponse.swift in Sources */,
 				BBD42308214D90B6005C8279 /* MainViewControllerAPIManager.swift in Sources */,
-				BBD4230C214D9789005C8279 /* MainCellView.swift in Sources */,
+				BBD4230C214D9789005C8279 /* MainViewCell.swift in Sources */,
 				BB40D8A4214D413400D31CB7 /* RestHeader.swift in Sources */,
 				BBD42303214D8564005C8279 /* CurrencyTextField.swift in Sources */,
 				BB40D896214D3A6600D31CB7 /* ResultData.swift in Sources */,

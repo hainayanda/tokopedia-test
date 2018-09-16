@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MainCellView : UICollectionViewCell {
+class MainViewCell : UICollectionViewCell {
     
     // UI COMPONENT
     var picture : UIImageView!
@@ -21,6 +21,33 @@ class MainCellView : UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        assemblyCell(frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    func apply(with data : ResultData){
+        self.data = data
+        itemPrice.text = data.price ?? "Rp 0"
+        itemName.text = data.name
+        picture.image = nil
+        guard let imageUri : String = data.image_uri else {
+            return
+        }
+        PictureManager.sharedInstance.getImage(key: "\(data.id ?? 0)", imageUri) { (image) in
+            DispatchQueue.main.async {
+                guard let image : UIImage = image else {
+                    self.picture.image = nil
+                    return
+                }
+                self.picture.image = image
+            }
+        }
+    }
+    
+    fileprivate func assemblyCell(_ frame : CGRect){
         self.contentView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.7).cgColor
         self.contentView.layer.borderWidth = 0.5
         self.contentView.backgroundColor = #colorLiteral(red: 0.9741632297, green: 0.9741632297, blue: 0.9741632297, alpha: 1)
@@ -52,30 +79,6 @@ class MainCellView : UICollectionViewCell {
             itemPrice.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant : 12),
             self.contentView.trailingAnchor.constraint(equalTo: itemPrice.trailingAnchor, constant: 12),
             ])
-        
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    func apply(with data : ResultData){
-        self.data = data
-        itemPrice.text = data.price ?? "Rp 0"
-        itemName.text = data.name
-        picture.image = nil
-        guard let imageUri : String = data.image_uri else {
-            return
-        }
-        PictureManager.sharedInstance.getImage(key: "\(data.id ?? 0)", imageUri) { (image) in
-            DispatchQueue.main.async {
-                guard let image : UIImage = image else {
-                    self.picture.image = nil
-                    return
-                }
-                self.picture.image = image
-            }
-        }
     }
     
 }

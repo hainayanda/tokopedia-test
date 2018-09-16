@@ -18,50 +18,46 @@ enum SpinnerPosition {
 extension UICollectionView {
     
     func showSpinner(on position: SpinnerPosition){
-        DispatchQueue.main.async {
-            switch position {
-            case .top:
-                self.contentInset = UIEdgeInsets.init(top: self.contentInset.top + 50, left: self.contentInset.left, bottom: self.contentInset.bottom, right: self.contentInset.right)
-                break
-            default:
-                self.contentInset = UIEdgeInsets.init(top: self.contentInset.top, left: self.contentInset.left, bottom: self.contentInset.bottom + 50, right: self.contentInset.right)
-            }
-            var spinnerView : UIView?
-            if let spView : UIView = self.getSpinner(on: position) {
-                spinnerView = spView
-            }
-            else {
-                spinnerView = UIView.init(frame: CGRect.init(x: 0, y: position == .top ? -50 : self.contentSize.height, width: self.frame.width, height: 50))
-                let spinner = UIActivityIndicatorView.init(frame: CGRect.init(x: (self.frame.width / 2) - 20, y: 0, width: 40, height: 40))
-                spinnerView?.addSubview(spinner)
-                spinner.startAnimating()
-                spinner.activityIndicatorViewStyle = .gray
-            }
-            self.addSubview(spinnerView!)
-            self.putSpinner(spinnerView!, for: position)
+        switch position {
+        case .top:
+            self.contentInset = UIEdgeInsets.init(top: self.contentInset.top + 50, left: self.contentInset.left, bottom: self.contentInset.bottom, right: self.contentInset.right)
+            break
+        default:
+            self.contentInset = UIEdgeInsets.init(top: self.contentInset.top, left: self.contentInset.left, bottom: self.contentInset.bottom + 50, right: self.contentInset.right)
         }
+        var spinnerView : UIView?
+        if let spView : UIView = self.getSpinner(on: position) {
+            spinnerView = spView
+        }
+        else {
+            spinnerView = UIView.init(frame: CGRect.init(x: 0, y: position == .top ? -50 : self.contentSize.height, width: self.frame.width, height: 50))
+            let spinner = UIActivityIndicatorView.init(frame: CGRect.init(x: (self.frame.width / 2) - 20, y: 0, width: 40, height: 40))
+            spinnerView?.addSubview(spinner)
+            spinner.startAnimating()
+            spinner.activityIndicatorViewStyle = .gray
+        }
+        self.addSubview(spinnerView!)
+        self.putSpinner(spinnerView!, for: position)
     }
     
     func hideSpinner(on position: SpinnerPosition){
-        DispatchQueue.main.async {
-            self.getSpinner(on: position)?.removeFromSuperview()
-            switch position {
-            case .top:
-                if self.spinnerExist(on: position) {
-                    UIView.animate(withDuration: 0.2, animations: {
-                        self.contentInset = UIEdgeInsets.init(top: self.contentInset.top - 50, left: self.contentInset.left, bottom: self.contentInset.bottom, right: self.contentInset.right)
-                    })
-                }
-                break
-            default:
-                if self.spinnerExist(on: position){
-                    UIView.animate(withDuration: 0.2, animations: {
-                        self.contentInset = UIEdgeInsets.init(top: self.contentInset.top, left: self.contentInset.left, bottom: self.contentInset.bottom - 50, right: self.contentInset.right)
-                    })
-                }
+        self.getSpinner(on: position)?.removeFromSuperview()
+        switch position {
+        case .top:
+            if self.spinnerExist(on: position) {
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.contentInset = UIEdgeInsets.init(top: self.contentInset.top - 50, left: self.contentInset.left, bottom: self.contentInset.bottom, right: self.contentInset.right)
+                })
             }
-            spinners[self]?.removeValue(forKey: position)
+            break
+        default:
+            if self.spinnerExist(on: position){
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.contentInset = UIEdgeInsets.init(top: self.contentInset.top, left: self.contentInset.left, bottom: self.contentInset.bottom - 50, right: self.contentInset.right)
+                })
+            }
         }
+        spinners[self]?.removeValue(forKey: position)
     }
     
     fileprivate func spinnerExist(on position: SpinnerPosition) -> Bool {

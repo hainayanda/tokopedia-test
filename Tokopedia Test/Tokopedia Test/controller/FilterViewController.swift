@@ -12,7 +12,6 @@ import WARangeSlider
 
 class FilterViewController : UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    
     // UI COMPONENT
     
     weak var navigationBar : UINavigationBar!
@@ -31,11 +30,11 @@ class FilterViewController : UIViewController, UICollectionViewDataSource, UICol
     var cellId = "shopType"
     
     var maximumPrice : Int {
-        return extractingValue(from: maximumPriceTextField)
+        return extractIntValue(from: maximumPriceTextField)
     }
     
     var minimumPrice : Int {
-        return extractingValue(from: minimumPriceTextField)
+        return extractIntValue(from: minimumPriceTextField)
     }
     
     // OVERRIDE
@@ -48,18 +47,18 @@ class FilterViewController : UIViewController, UICollectionViewDataSource, UICol
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.lightGray
         
-        navigationBar = setupNavbar(with: #selector(dismiss(_:)), and: #selector(onResetClicked(_:)))
-        let actionHandler = setupPriceFilter(maximumValue: Double(maximumPriceForSlider), topAnchorConstraint: navigationBar.bottomAnchor, margin: 12)
+        navigationBar = createNavigationBar(with: #selector(dismiss(_:)), and: #selector(onResetClicked(_:)))
+        let actionHandler = createPriceFilterSection(maximumValue: Double(maximumPriceForSlider), topAnchorConstraint: navigationBar.bottomAnchor, margin: 12)
         let priceFilterCard = actionHandler.0
         minimumPriceTextField = actionHandler.1
         maximumPriceTextField = actionHandler.2
         rangeSlider = actionHandler.3
         wholeSaleSwitch = actionHandler.4
-        shopTypeCollection = setupShopType(topAnchorConstraint: priceFilterCard.bottomAnchor, margin: 12, goToShopType: #selector(goToShopTypeDetails(_:)))
+        shopTypeCollection = createShopTypeSection(topAnchorConstraint: priceFilterCard.bottomAnchor, margin: 12, goToShopType: #selector(goToShopTypeDetails(_:)))
         shopTypeCollection.dataSource = self
         shopTypeCollection.delegate = self
         
-        applyButton = setupApplyButton(onClick: #selector(apply(_:)))
+        applyButton = createApplyButton(onClick: #selector(apply(_:)))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,7 +87,7 @@ class FilterViewController : UIViewController, UICollectionViewDataSource, UICol
             mainVC.filter.wholeSale = wholeSaleSwitch.isOn
             mainVC.filter.goldMerchant = filter.goldMerchant
             mainVC.filter.officialStore = filter.officialStore
-            mainVC.requestForResult(for: mainVC.KEY_FOR_SEARCH, with: mainVC.filter, startIndex: 0, count: 10)
+            mainVC.requestForResult(for: mainVC.KEY_FOR_SEARCH, with: mainVC.filter, startIndex: 0, count: 10, delegate: mainVC)
         }
         self.dismiss(animated: true, completion: nil)
     }
@@ -117,14 +116,14 @@ class FilterViewController : UIViewController, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ShopTypeCell
         cell.label.text = indexPath.item == 0 ? "Gold Merchant" : "Official Store"
-        cell.apply(color: ((indexPath.item == 0 && filter.goldMerchant) || filter.officialStore) ?  #colorLiteral(red: 0.2588235294, green: 0.7098039216, blue: 0.2862745098, alpha: 1) : UIColor.lightGray )
+        cell.apply(color: ((indexPath.item == 0 && filter.goldMerchant) || (indexPath.item == 1 && filter.officialStore)) ?  #colorLiteral(red: 0.2588235294, green: 0.7098039216, blue: 0.2862745098, alpha: 1) : UIColor.lightGray )
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: false)
         let cell = collectionView.cellForItem(at: indexPath) as! ShopTypeCell
-        cell.apply(color: ((indexPath.item == 0 && filter.goldMerchant) || filter.officialStore) ? UIColor.lightGray : #colorLiteral(red: 0.2588235294, green: 0.7098039216, blue: 0.2862745098, alpha: 1) )
+        cell.apply(color: ((indexPath.item == 0 && filter.goldMerchant) || (indexPath.item == 1 && filter.officialStore)) ? UIColor.lightGray : #colorLiteral(red: 0.2588235294, green: 0.7098039216, blue: 0.2862745098, alpha: 1) )
         if indexPath.item == 0 {
             filter.goldMerchant = !(filter.goldMerchant)
         }
@@ -135,7 +134,7 @@ class FilterViewController : UIViewController, UICollectionViewDataSource, UICol
     
     // FUNCTION
     
-    func extractingValue(from textField : UITextField) -> Int {
+    func extractIntValue(from textField : UITextField) -> Int {
         guard let text : String = textField.text, text.count > 0 else {
             return 0
         }

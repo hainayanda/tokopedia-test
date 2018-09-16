@@ -21,6 +21,14 @@ class ShopTypeRadioButtonCell : UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        assemblyCell()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    func assemblyCell(){
         self.contentView.backgroundColor = #colorLiteral(red: 0.9591727475, green: 0.9591727475, blue: 0.9591727475, alpha: 1)
         radioButton = DLRadioButton(type: .contactAdd)
         radioButton.translatesAutoresizingMaskIntoConstraints = false
@@ -43,10 +51,6 @@ class ShopTypeRadioButtonCell : UITableViewCell {
             label.leadingAnchor.constraint(equalTo: radioButton.trailingAnchor, constant: 12),
             contentView.trailingAnchor.constraint(equalTo: label.trailingAnchor, constant: 12)
             ])
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
     }
     
 }

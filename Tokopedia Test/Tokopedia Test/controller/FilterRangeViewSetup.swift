@@ -63,7 +63,7 @@ extension FilterViewController : CurrencyTextFieldDelegate {
     
     // UI SETUP
     
-    func setupNavbar(with dismissHandler : Selector, and resetHandler : Selector) -> UINavigationBar {
+    func createNavigationBar(with dismissHandler : Selector, and resetHandler : Selector) -> UINavigationBar {
         let screenSize: CGRect = UIScreen.main.bounds
         
         let navBar = UINavigationBar()
@@ -105,7 +105,7 @@ extension FilterViewController : CurrencyTextFieldDelegate {
         return navBar
     }
     
-    func setupPriceFilter(maximumValue : Double, topAnchorConstraint topAnchor : NSLayoutYAxisAnchor, margin : CGFloat) -> (UIView, CurrencyTextField, CurrencyTextField, RangeSlider, UISwitch){
+    func createPriceFilterSection(maximumValue : Double, topAnchorConstraint topAnchor : NSLayoutYAxisAnchor, margin : CGFloat) -> (UIView, CurrencyTextField, CurrencyTextField, RangeSlider, UISwitch){
         let viewCard = UIView()
         viewCard.backgroundColor = #colorLiteral(red: 0.9591727475, green: 0.9591727475, blue: 0.9591727475, alpha: 1)
         viewCard.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.7).cgColor
@@ -304,7 +304,7 @@ extension FilterViewController : CurrencyTextFieldDelegate {
         return sw
     }
     
-    func setupApplyButton(onClick handler : Selector) -> UIButton {
+    func createApplyButton(onClick handler : Selector) -> UIButton {
         
         let applyButton = UIButton()
         applyButton.setTitle("Apply", for: .normal)
