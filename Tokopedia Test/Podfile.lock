@@ -1,0 +1,34 @@
+PODS:
+  - DLRadioButton (1.4.12)
+  - Eatr (0.1.4):
+    - HandyJSON (~> 4.1.1)
+  - HandyJSON (4.1.3)
+  - Nativefier (0.1.2):
+    - HandyJSON (~> 4.1.1)
+  - WARangeSlider (1.1.1)
+
+DEPENDENCIES:
+  - DLRadioButton (~> 1.4)
+  - Eatr
+  - HandyJSON (~> 4.1.1)
+  - Nativefier
+  - WARangeSlider
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DLRadioButton
+    - Eatr
+    - HandyJSON
+    - Nativefier
+    - WARangeSlider
+
+SPEC CHECKSUMS:
+  DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
+  Eatr: 8ba417649a230271a72dac940dafd3e2e87f68bd
+  HandyJSON: bc81fbeb62d65ae5d5942ed29bc4a8265d18c1e8
+  Nativefier: 9a44c5bc73fdfba19905af467e2340f4666c4631
+  WARangeSlider: 54b3e0853b8d16c444fd539005901aecee86837d
+
+PODFILE CHECKSUM: 974277b2f0634a986f8989d289775fac29662574
+
+COCOAPODS: 1.6.0.beta.1
